@@ -1,0 +1,76 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Mobile devices – 320px — 480px.
+iPads, Tablets – 481px — 768px.
+Small screens, laptops – 769px — 1024px.
+Desktops, large screens – 1025px — 1200px.
+Extra large screens, TV – 1201px, and more. */
+
+@media screen and (min-width: 768px) {
+    #section-A {
+        display: inline-block;
+        font-size: 0;
+    }
+    
+    #section-A h1 {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        font-size: 26px;
+        color: #333;
+    }
+
+    .bloco {
+        display: inline-block;
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .img {
+        width: 30%;
+        font-size: 0;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .img > h2 {
+        color: #333;
+        font-size: 22px;
+        padding-top: 45px;
+    }
+
+    .img > p {
+        color: #333;
+        font-size: 16px;
+        padding: 40px;
+        text-align: center;
+    }
+    
+    #section-contact {
+        display: inline-block;
+        font-size: 0;
+    }
+
+    .aside {
+        display: inline-block;
+        width: 50%;
+        font-size: 16px;
+        padding: 16px;
+    }
+
+    .aside > p {
+        padding: 20px;
+        margin: 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .aside > h1 {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 28px;
+    }
+}

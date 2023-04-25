@@ -1,39 +1,40 @@
+@charset "UTF-8";
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body,
-html {
-    width: 100vw;
-    height: 100vh;
-    line-height: 1.5;
+html, body {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+    color: white;
 }
 
 /* header */
 header {
     width: 100%;
-    height: 500px;
-    color: whitesmoke;
-    padding-bottom: 20px; /* Adiciona padding para garantir que o conteúdo não seja sobreposto */
-    box-sizing: border-box; /* Adiciona o box-sizing para incluir o padding na altura total */
-    position: relative; /* Adiciona a posição relativa para que o elemento filho possa ser posicionado dentro do header */
+    height: 450px;
 }
 
-.bg-img {
-    position: absolute;
-    background: #333 url(img/coding.png);
-    background-position: center;
+header > .bg-img {
+    background-color: #333;
+    background-image: url(img/coding.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    
     width: 100%;
-    height: 500px; /* Define a mesma altura do header */
+    height: 450px;
+    position: absolute;
     z-index: -1;
     opacity: 0.88;
 }
-
 
 .bg-img::before {
     content: "";
@@ -47,19 +48,28 @@ header {
 }
 
 #headerA {
-    width: 850px;
     text-align: center;
-    margin: 0 auto;
 }
 
 #headerA > h1 {
-    font-size: 2.5em;
-    padding-top: 110px;
-    padding-bottom: 20px;
+    padding-top: 100px;
+    padding-bottom: 25px;
 }
 
 #headerA > p {
-    font-size: 1.1em;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+}
+
+.bloco {
+    color: #333;
+    padding: 0px 40px;
+}
+
+#paragraph {
+    padding-bottom: 40px;
 }
 
 button#btn {
@@ -73,139 +83,117 @@ button#btn {
     padding: 5px;
 }
 
-button#btn:hover {
-    background-color: whitesmoke;
-    color: #333;
-    cursor: pointer;
-    transition: .7s;
+button#btn a {
+    text-decoration: none;
+    color: white;
 }
 
-/* Section A */
+/* Começando o conteúdo: section-A*/
 #section-A {
     width: 100%;
+    background-color: rgb(209, 204, 204);
+}
+
+#section-A h1 {
     color: #333;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#section-A p {
+    padding: 10px;
     text-align: center;
-    padding-bottom: 3em;
 }
 
-#section-A > h1 {
-    font-size: 2.1em;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
+/* section-B */
 
-.bloco {
-    width: 500px;
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 1.2em;
-    text-align: start;
-    text-indent: 5px;
-}
-
-/* Section B */
 #section-B {
-    background-color: #333;
-    color: whitesmoke;
+    display: block;
+    width: 100%;
     text-align: center;
+    padding: 20px;
+
+    background-color: #333;
+}
+
+#section-B img {
+    width: 100%;
 }
 
 .img {
-    display: inline-block;
-    width: 300px;
-    color: #333;
     background-color: white;
-    margin: 30px 10px 40px 10px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-
-.img > p {
-    margin: 12px;
-    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .img > h2 {
     padding-top: 40px;
     padding-bottom: 30px;
-}
-
-img {
-    width: 300px;
-}
-
-/* Section-C */
-#section-C {
-    text-align: center;
     color: #333;
-    padding-top: 70px;
+    font-size: 1.3em;
+}
+
+.img > p {
+    padding: 20px;
     padding-bottom: 50px;
-    width: 950px;
-    margin: 0 auto;
-}
-
-#section-C > h1 {
-    font-size: 2em;
-    padding-bottom: 40px;
-}
-
-#section-C > p {
+    color: #333;
     font-size: 1.2em;
 }
 
-/* Section-Contact */
-#section-contact {
-    width: 100%;
-    display: inline-block;
-    font-size: 0;
-}
-
-.aside {
-    width: 50%;
-    height: 300px;
-    display: inline-block;
-    font-size: 16px;
+/* section-C */
+#section-C {
     text-align: center;
-    padding: 70px;
-
-    background-color: #333;
-    color: white;
 }
+
+#section-C > h1 {
+    color: #333;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 50px;
+}
+
+#section-C > p {
+    color: #333;
+    font-size: 1.2em;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+/* section-Contact */
 
 #section-contact > .aside:first-child {
     background-color: #2690d4;
 }
 
-.aside > p {
-    font-size: 1.1em;
+.aside {
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
 }
 
 .aside > h1 {
-    font-size: 32px;
+    padding-top: 50px;
+}
+
+.aside > p {
+    font-size: 1.2em;
+    padding: 47px;
 }
 
 /* Footer */
 footer {
-    width: 100%;
     background-color: black;
-    color: white;
     text-align: center;
-    display: inline-block;
-    padding: 40px;
-    font-size: 0;
-}
-
-.footer-part {
-    display: inline-block;
-    font-size: 22px;
-    width: 50%;
-}
-
-a {
-    text-decoration: none;
-    color: #2690d4;
-}
-
-a:hover {
     color: white;
+    padding: 40px;
+    font-size: 1.1em;
+}
+
+#footer-part {
+    padding-top: 10px;
+}
+
+#footer-part a {
+    color: #2690d4;
+    text-decoration: none;
 }
