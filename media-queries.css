@@ -10,15 +10,16 @@ Small screens, laptops – 769px — 1024px.
 Desktops, large screens – 1025px — 1200px.
 Extra large screens, TV – 1201px, and more. */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     #section-A {
         display: inline-block;
         font-size: 0;
-    }
+        margin: 0 auto;
+}
     
     #section-A h1 {
         padding-top: 50px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         font-size: 26px;
         color: #333;
     }
@@ -26,11 +27,29 @@ Extra large screens, TV – 1201px, and more. */
     .bloco {
         display: inline-block;
         width: 50%;
+        height: 150px;
         font-size: 20px;
     }
 
+    #section-A > .bloco > p {
+        padding: 20px;
+    }
+
+    #paragraph {
+        padding-bottom: 0;
+    }
+
+    #section-B {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 500px;
+        padding: 20px;
+    }
+
     .img {
-        width: 30%;
+        width: 29%;
+        height: 430px;
         font-size: 0;
         display: inline-block;
         margin: 10px;
@@ -39,16 +58,15 @@ Extra large screens, TV – 1201px, and more. */
     .img > h2 {
         color: #333;
         font-size: 22px;
-        padding-top: 45px;
+        padding-top: 30px;
     }
 
     .img > p {
         color: #333;
         font-size: 16px;
-        padding: 40px;
         text-align: center;
     }
-    
+
     #section-contact {
         display: inline-block;
         font-size: 0;
@@ -57,20 +75,26 @@ Extra large screens, TV – 1201px, and more. */
     .aside {
         display: inline-block;
         width: 50%;
+        height: 250px;
         font-size: 16px;
-        padding: 16px;
+        overflow: auto;
+        padding: 10px;
     }
 
     .aside > p {
-        padding: 20px;
-        margin: 0px;
-        font-size: 18px;
-        text-align: center;
+        padding: 15px;
+        margin: 0;
+        text-align: justify;
+        font-size: 1.1em;
     }
 
     .aside > h1 {
-        padding-bottom: 20px;
-        padding-top: 20px;
-        font-size: 28px;
+        padding: 20px 0;
+    }
+
+    #section-contact .contact {
+        text-align: center;
     }
 }
+
+@media screen and (min-width: )
