@@ -1,199 +1,258 @@
 @charset "UTF-8";
 
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-html, body {
-    scroll-behavior: smooth;
-}
-
-h1 {
     text-align: center;
-    color: white;
 }
 
 /* header */
+
 header {
-    width: 100%;
-    height: 450px;
-}
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
 
-header > .bg-img {
-    background-color: #333;
-    background-image: url(img/coding.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    width: 100%;
+    height: 460px;
     
-    width: 100%;
-    height: 450px;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.88;
+    background-image: url(img/coding.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+
+    color: whitesmoke;
 }
 
-.bg-img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* aqui o 0.5 representa a transparência */
-    z-index: 1;
-}
-
-#headerA {
-    text-align: center;
-}
-
-#headerA > h1 {
+header h1 {
     padding-top: 100px;
-    padding-bottom: 25px;
+    font-size: 2em;
 }
 
-#headerA > p {
-    color: white;
+header p {
+    padding: 1.7em 0;
+    width: 55%;
     text-align: center;
-    font-size: 1.2em;
-    padding: 20px;
-}
-
-.bloco {
-    color: #333;
-    padding: 0px 40px;
-}
-
-#paragraph {
-    padding-bottom: 40px;
-}
-
-button#btn {
-    width: 178px;
-    height: 68px;
-    border: 1px solid #666;
-    background-color: #333;
-    color: white;
     font-size: 1.1em;
-    margin-top: 25px;
-    padding: 5px;
+    line-height: 1.5;
 }
 
-button#btn a {
-    text-decoration: none;
+.btn {
+    padding: 1.3em 3em;
+    margin: 0.5em 0;
+    border: 1px solid #666;
+}
+
+.btn:hover {
+    background-color: #666;
     color: white;
+    transition: .4s;
+    cursor: pointer;
+    border: 1px solid white;
 }
 
-/* Começando o conteúdo: section-A*/
-#section-A {
-    width: 100%;
-    background-color: rgb(209, 204, 204);
-}
-
-#section-A h1 {
+.secao1 {
+    background-color: #eaeaea;
     color: #333;
-    padding-top: 30px;
-    padding-bottom: 50px;
 }
 
-#section-A p {
-    padding: 10px;
+/* secao 1 */
+
+.secao1 h2 {
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
-/* section-B */
+.secao1 p {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    max-width: 960px;
+    text-align: justify;
+    margin: 0 auto;
 
-#section-B {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
+    font-size: 1.3em;
+    line-height: 1.5;
+    padding-bottom: 30px;
+}
+
+/* secao main */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+    align-items: center;
+    padding: 30px 0;
 
     background-color: #333;
 }
 
-#section-B img {
+.artic {
+    background-color: white;
+    width: 20%;
+}
+
+.main img {
     width: 100%;
 }
 
-.img {
-    background-color: white;
-    margin-bottom: 20px;
-}
-
-.img > h2 {
-    padding-top: 40px;
-    padding-bottom: 30px;
-    color: #333;
-    font-size: 1.3em;
-}
-
-.img > p {
-    padding: 20px;
-    padding-bottom: 50px;
+.main p {
     color: #333;
     font-size: 1.2em;
-}
-
-/* section-C */
-#section-C {
     text-align: center;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    padding: 10px; /*remover depois.*/
 }
 
-#section-C > h1 {
+.main h2 {
     color: #333;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding: 50px;
+    margin: 50px 0;
 }
 
-#section-C > p {
+/* secao 2 */
+.secao2 h1 {
+    padding: 70px 0px 60px 0px;
     color: #333;
+}
+
+.secao2 p {
+    width: 70%;
+    margin: 0 auto;
     font-size: 1.2em;
-    padding: 20px;
+    color: #333;
     padding-bottom: 50px;
 }
 
-/* section-Contact */
+/* footer */
+footer div.contato {
+    display: flex;
+}
 
-#section-contact > .aside:first-child {
+div.contato article {
+    margin: 0 auto;
+    width: 50%;
+    color: #eaeaea;
     background-color: #2690d4;
 }
 
-.aside {
-    width: 100%;
-    background: #333;
-    color: white;
-    text-align: center;
+
+div.contato h1 {
+    padding: 40px 0 0 0;
 }
 
-.aside > h1 {
-    padding-top: 50px;
-}
-
-.aside > p {
+div.contato p {
     font-size: 1.2em;
-    padding: 47px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
-/* Footer */
-footer {
+
+
+/* .email {
+    padding: 30px 0;
+} */
+
+div.contato article:first-child {
+    background-color: #333;
+}
+
+/* secao 3 */
+.secao3 {
     background-color: black;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    font-size: 1.1em;
+    color: #eaeaea;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    font-size: 1.2em;
 }
 
-#footer-part {
-    padding-top: 10px;
-}
-
-#footer-part a {
-    color: #2690d4;
+.Felilpz a {
+    color: aqua;
     text-decoration: none;
+    font-weight: bold;
 }
+
+.Felilpz a:hover {
+    color: #2690d4;
+    transition: .3s;
+}
+
+/* media queries */
+@media screen and (max-width: 699px) {
+    /* header */
+    header p {
+        width: 70%;
+        color: whitesmoke;
+    }
+
+    /* secao1 */
+    .secao1 p {
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    /* main */
+    .main {
+        flex-direction: column;
+    }
+
+    .main article.artic {
+        width: 100%;
+    }
+
+    /* footer contato */
+    .contato {
+        flex-direction: column;
+    }
+
+    div.contato article {
+        width: 100%;
+    }
+
+    .contato article > p {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /* header */
+    header p {
+        width: 80%;
+        color: whitesmoke;
+    }
+
+    /* secao 1 */
+    .secao1 p {
+        padding: 20px;
+        font-size: 1.2em;
+    }
+
+    /* main */
+    section.main {
+        gap: 1em;
+    }
+
+    section.main > article {
+        width: 23%;
+    }
+
+    section.main p {
+        font-size: 1em;
+        padding: 10px;
+        text-align: center;
+    }
+} 
